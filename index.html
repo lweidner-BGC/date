@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Luke Weidner — Golden, Colorado</title>
+
+<!-- Keeps the page out of Google. Delete these two lines if you WANT
+     it findable by search. Anyone with the link can still open it. -->
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:title" content="Luke Weidner">
+<meta property="og:description" content="Geological engineer in Golden, Colorado. Runs uphill, plays piano, argues about bike racks.">
+<meta property="og:type" content="profile">
+<!-- <meta property="og:url" content="https://YOURDOMAIN.com"> -->
+<!-- <meta property="og:image" content="https://YOURDOMAIN.com/img/preview.jpg"> -->
+
+<!-- ==========================================================
+     BLANKS STILL TO FILL — search for class="blank".
+     They render as red brackets on the live page. In page order:
+       1. age (under the title)
+       2. what you're looking for (under the title)
+       3. age (stats table)
+       4. height (stats table)
+       5. kids (stats table)
+       6. drinks / smoke / vape (stats table)
+       7. looking for (stats table)
+       8. last-updated date (footer)
+     No build step, no JavaScript, no webfonts. Photos live in img/.
+     ========================================================== -->
+
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+
+body{
+  margin:0;
+  padding:14px 8px 40px;
+  background-color:#008080;
+  background-image:
+    repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 6px,transparent 6px 12px),
+    repeating-linear-gradient(-45deg,rgba(0,0,0,.06) 0 6px,transparent 6px 12px);
+  color:#000;
+  font-family:"Times New Roman",Times,serif;
+  font-size:17px;
+  line-height:1.5;
+}
+
+a{color:#0000ee}
+a:visited{color:#551a8b}
+img{max-width:100%}
+
+.page{
+  max-width:760px;
+  margin:0 auto;
+  background:#ffffcc;
+  border:2px solid;
+  border-color:#fff #808080 #808080 #fff;
+}
+
+/* ---------- scrolling welcome banner ---------- */
+.banner{
+  overflow:hidden;
+  background:#000;
+  color:#00ff00;
+  font-family:"Courier New",Courier,monospace;
+  font-size:14px;
+  letter-spacing:1px;
+  padding:5px 0;
+  white-space:nowrap;
+  border-bottom:2px solid #808080;
+}
+.banner span{display:inline-block;padding-left:100%;animation:slide 19s linear -4s infinite}
+@keyframes slide{to{transform:translateX(-100%)}}
+
+/* ---------- nameplate ---------- */
+.top{padding:16px 18px 12px;text-align:center}
+h1{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:clamp(25px,6.2vw,42px);
+  letter-spacing:1px;
+  color:#000080;
+  text-shadow:2px 2px 0 #c0c0c0;
+}
+.tagline{
+  margin:8px 0 0;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:13px;
+  color:#333;
+}
+hr{border:0;border-top:2px groove #c0c0c0;margin:12px 0}
+
+/* ---------- nav ---------- */
+.nav{
+  text-align:center;padding:9px 6px;
+  background:#c0c0c0;
+  border-top:2px solid #fff;border-bottom:2px solid #808080;
+}
+.nav a{
+  display:inline-block;margin:3px;padding:4px 11px;
+  background:#c0c0c0;
+  border:2px solid;border-color:#fff #808080 #808080 #fff;
+  font-family:Arial,Helvetica,sans-serif;font-size:13px;
+  color:#000080;text-decoration:none;
+}
+.nav a:visited{color:#000080}
+.nav a:active{border-color:#808080 #fff #fff #808080}
+
+/* ---------- body ---------- */
+.body{padding:4px 18px 20px}
+h2{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:19px;letter-spacing:1px;text-transform:uppercase;
+  color:#800080;margin:28px 0 10px;
+}
+h2::before{content:"** "}
+h2::after{content:" **"}
+p{margin:0 0 .9em}
+.blank{color:#ff0000;font-weight:bold}
+
+.mugshot{
+  float:left;width:200px;
+  margin:5px 15px 8px 0;
+  border:3px double #800080;
+  padding:3px;background:#fff;
+}
+
+/* ---------- stuff i do ---------- */
+ul.stuff{list-style:none;padding:0;margin:0}
+ul.stuff li{margin:0 0 11px;display:flex;gap:11px;align-items:flex-start}
+ul.stuff .glyph{
+  flex:0 0 48px;margin-top:5px;padding:1px;
+  background:#fff;border:1px solid #808080;line-height:0;
+}
+ul.stuff b{font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#000080}
+
+.construction{
+  display:inline-block;vertical-align:middle;margin-left:7px;padding:3px;
+  background:repeating-linear-gradient(45deg,#ffd400 0 5px,#111 5px 10px);
+}
+.construction b{
+  display:block;background:#ffffcc;padding:1px 6px;
+  font-family:Arial,Helvetica,sans-serif;font-size:10px;letter-spacing:.5px;color:#000;
+}
+
+/* ---------- stats ---------- */
+table.stats{border-collapse:collapse;width:100%;background:#fff;font-size:16px}
+table.stats th{
+  background:#c0c0c0;text-align:left;white-space:nowrap;
+  font-family:Arial,Helvetica,sans-serif;font-size:12px;
+  text-transform:uppercase;letter-spacing:.5px;
+  padding:6px 9px;border:2px solid;border-color:#fff #808080 #808080 #fff;
+}
+table.stats td{padding:6px 9px;border:1px solid #808080}
+
+/* ---------- faq ---------- */
+dl.faq{margin:0}
+dl.faq dt{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:15px;color:#000080;margin-top:14px}
+dl.faq dt::before{content:"Q: "}
+dl.faq dd{margin:3px 0 0 0;padding-left:20px}
+dl.faq dd::before{content:"A: ";font-weight:bold}
+
+/* ---------- pix ---------- */
+.new{
+  color:#ff00ff;font-family:Arial,Helvetica,sans-serif;
+  font-size:11px;font-weight:bold;letter-spacing:1px;
+  animation:blink 1.1s steps(1) infinite;
+}
+@keyframes blink{50%{opacity:0}}
+table.pix{border-collapse:separate;border-spacing:9px;width:100%;margin-left:-9px}
+table.pix td{
+  width:50%;vertical-align:top;text-align:center;
+  background:#fff;padding:7px;
+  border:2px solid;border-color:#808080 #fff #fff #808080;
+}
+table.pix img{max-width:100%;max-height:330px;width:auto;height:auto;display:block;margin:0 auto;border:1px solid #808080}
+table.pix .cap{
+  display:block;margin-top:7px;
+  font-family:"Comic Sans MS","Comic Sans","Chalkboard SE","Comic Neue",cursive;
+  font-size:13px;line-height:1.35;color:#800080;
+}
+
+/* ---------- email ---------- */
+.envelope{
+  display:inline-block;width:26px;height:17px;
+  background:#fff;border:2px solid #000;
+  position:relative;vertical-align:-3px;margin-right:9px;
+}
+.envelope::after{
+  content:"";position:absolute;left:0;top:0;
+  width:0;height:0;
+  border-left:11px solid transparent;
+  border-right:11px solid transparent;
+  border-top:9px solid #000;
+}
+a.email{font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:bold}
+
+/* ---------- footer ---------- */
+footer{
+  text-align:center;padding:16px 18px 20px;
+  background:#c0c0c0;border-top:2px solid #fff;
+  font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#333;line-height:1.8;
+}
+.counter{
+  display:inline-block;padding:3px;margin:0 2px;vertical-align:-4px;
+  background:#000;border:2px solid;border-color:#808080 #fff #fff #808080;
+}
+.counter span{
+  display:inline-block;margin:0 1px;padding:1px 4px;
+  background:#111;color:#00ff00;
+  font-family:"Courier New",Courier,monospace;font-size:16px;font-weight:bold;
+}
+.webring{font-family:"Courier New",Courier,monospace;font-size:12px;margin-top:6px}
+
+@media (max-width:560px){
+  body{padding:6px 4px 24px}
+  .body{padding:4px 12px 16px}
+  .mugshot{float:none;width:100%;margin:0 0 12px}
+  table.pix,table.pix tbody,table.pix tr,table.pix td{display:block;width:100%}
+  table.pix td{margin-bottom:9px}
+}
+@media (prefers-reduced-motion:reduce){
+  .banner span{animation:none;padding-left:0;display:block;text-align:center}
+  .new{animation:none}
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="banner"><span>&#9733; welcome to my home page &#9733; thanks for visiting &#9733; my AIM screen name is lightcuber &#9733; idk how this works &#9733;</span></div>
+
+  <!-- ================= NAMEPLATE ================= -->
+  <div class="top">
+    <h1>Luke Weidner's Home Page</h1>
+    <p class="tagline">Golden, Colorado &nbsp;&#183;&nbsp; <span class="blank">[30 yo]</span> &nbsp;&#183;&nbsp; geological engineer &nbsp;&#183;&nbsp; <span class="blank">[looking for long term relationship, one person]</span></p>
+  </div>
+
+  <div class="nav">
+    <a href="#about">about me</a>
+    <a href="#stuff">stuff i do</a>
+    <a href="#stats">my stats</a>
+    <a href="#pix">pix</a>
+    <a href="#faq">the faq</a>
+    <a href="#email">e-mail me</a>
+  </div>
+
+  <div class="body">
+
+    <!-- ================= ABOUT ================= -->
+    <h2 id="about">About me</h2>
+    <img class="mugshot" src="img/photo1.jpg" alt="" width="200">
+    <p>I'm a map enthusiast, trail runner, and geological engineer.</p>
+    <p>I grew up in Michigan - can't say where without using my hand, sorry.</p>
+    <p>Did a PhD in geological engineering. I sit at my computer and write code most days, and I like it that way.</p>
+    <p>I run and bike uphill, mostly on the trails around Golden. My coffee order goes like this: "I'll have a chai latte, also would you mind if I installed a bike rack out front?" I play piano, badly enough to keep practicing, but good enough the Steinway salesperson thought I should have gone to conservatory.</p>
+    <p>I bought a 1950s house earlier this year. Generally involves trying to fix something for three weeks, then paying someone else to fix it in 15 minutes. I'm learning French, with which I can pretend that I am Canadian and then switch to English. I have a cat. I'd rather take the train.</p>
+
+    <hr>
+
+    <!-- ================= STUFF I DO ================= -->
+    <h2 id="stuff">Stuff I do</h2>
+    <ul class="stuff">
+      <li>
+        <span><b>Trail running - </b> Running uphill several times a week. Will gladly hike too if the company's good.</span>
+      </li>
+      <li>
+        <span><b>Bike commuting and bike infra - </b> I will bike to work when the probability of bodily harm is &lt; 50%. I also advocate for improved bike safety in Golden.</span>
+      </li>
+      <li>
+        <span><b>Have the coolest job ever - </b> Survey rock slopes with laser scanners and drones and get paid.</span>
+      </li>
+      <li>
+        <span><b>Happy place - </b>  Secluded mountain stream &gt; crowded beach.</span>
+      </li>
+      <li>
+        <span><b>Piano & music - </b>  Will play anything written between 1750 and 2026. <span class="construction"><b>PIANO ROOM UNDER CONSTRUCTION</b></span></span>
+      </li>
+      <li>
+        <span><b>Dancing - </b>  High BPM electronic dance music at volume (with ear protection of course). Psytrance, house, DnB, techno, acid...</span>
+      </li>
+    </ul>
+
+    <hr>
+
+    <!-- ================= STATS ================= -->
+    <h2 id="stats">My stats</h2>
+    <table class="stats" border="1" cellpadding="4" cellspacing="0">
+      <tr><th>Based</th><td>Golden, Colorado</td></tr>
+      <tr><th>Work</th><td>Geological engineer  rock slopes, rockfall, dam safety</td></tr>
+      <tr><th>Age</th><td><span class="blank">[30]</span></td></tr>
+      <tr><th>Height</th><td><span class="blank">[170]</span></td></tr>
+      <tr><th>Kids</th><td><span class="blank">[open]</span></td></tr>
+      <tr><th>Drinks / Smoke / Vape</th><td><span class="blank">[rarely/never/never]</span></td></tr>
+      <tr><th>Looking for</th><td><span class="blank">[something serious]</span></td></tr>
+      <tr><th>Dependents</th><td>One cat</td></tr>
+    </table>
+
+    <hr>
+
+    <!-- ================= FAQ ================= -->
+    <h2 id="faq">The FAQ</h2>
+    <dl class="faq">
+      <dt>What is a good Saturday?</dt>
+      <dd>Run up lookout, followed by dip in the creek. Hang out with friends all afternoon.</dd>
+      <dt>What should I ask you about?</dt>
+      <dd>Why Iceland is the most beautiful place on the planet and why you need to go there.</dd>
+      <dt>What are you bad at?</dt>
+      <dd>French in real time. In a caf&eacute; in Geneva I confidently ordered something I did not want and ate all of it.</dd>
+      <dd>Also small talk, in any language.</dd>
+    </dl>
+
+    <hr>
+
+    <!-- ================= PIX ================= -->
+    <h2 id="pix">Pix <span class="new">NEW!</span></h2>
+    <table class="pix" cellspacing="9" cellpadding="7">
+      <tr>
+        <td><img src="img/glass.jpg" alt=""><span class="cap">I have a face.</span></td>
+        <td><img src="img/run.png" alt=""><span class="cap">First marathon. Unfortunately not sponsored by the sandal company (yet...).</span></td>
+      </tr>
+      <tr>
+        <td><img src="img/bike.jpg" alt=""><span class="cap">It's e-bike o'clock.</span></td>
+        <td><img src="img/cat.jpg" alt=""><span class="cap">I have a cat.</span></td>
+      </tr>
+      <tr>
+        <td><img src="img/suit.jpg" alt=""><span class="cap">No autographs please. (click to enlarge  j/k)</span></td>
+        <td style="background:#ffffcc;border-color:#ffffcc"></td>
+      </tr>
+    </table>
+
+    <hr>
+
+    <!-- ================= LOOKING FOR ================= -->
+    <h2 id="looking">Who I am looking for</h2> 
+    <p>Someone seriously curious, who will follow a thread three levels too deep. 
+    Someone comfortable with debate, to take a side and hold it. Being able to disagree yet feel secure is something I really value.
+    I'm used to doing most of this stuff alone and I'm good at it. But it'd be better if you wanted to come dance and travel with me. I'm basically a regular at the Church nightclub this year. </p>
+
+    <p>Here because it's home, not just on a two-year detour to find yourself. </p>
+
+    <hr>
+
+    <!-- ================= EMAIL ================= -->
+    <h2 id="email">E-mail me</h2>
+    <p>Tell me what you're way too into right now. The longer the better.</p>
+    <p><span class="envelope"></span><a class="email" href="mailto:hello@lukew.email">hello@lukew.email</a></p>
+    <p style="font-size:14px">You can also sign my guestbook, except I never built one, so this is the guestbook.</p>
+
+  </div>
+
+  <footer>
+    You are visitor number
+    <span class="counter"><span>0</span><span>0</span><span>0</span><span>1</span><span>4</span><span>7</span></span>
+    <br>
+    Last updated <span class="blank">[August, 2026]</span> &nbsp;&#183;&nbsp; Best viewed in Netscape Navigator at 800x600 &nbsp;&#183;&nbsp; This page is Y2K compliant
+    <br>
+    Compiled from personal recollection &#183; Accuracy not guaranteed &#183; Edition 1
+    <div class="webring">&lt;&lt; prev &nbsp;|&nbsp; random &nbsp;|&nbsp; next &gt;&gt;</div>
+  </footer>
+
+</div>
+
+</body>
+</html>
